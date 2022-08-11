@@ -7,114 +7,189 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main class="container">
-    <div class="nav header">
-      <img src="./images/logo.svg" alt="Sunnyside logo" class="logo">
-      <input type="checkbox" class="menu-btn" id="menu-btn">
-      <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
-      <ul class="menu">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#" class="nav-contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="banner-header">
+  <main>
+    <section class="hero-banner">
+      <header>
+        <div>
+          <img src="./images/logo.svg" alt="logo" class="logo">
+        </div>
+        <img src="./images/icon-hamburger.svg" alt="menu icon" class="icon icon-menu">
+
+        <nav class="desktop-menu-container">
+          <ul>
+            <li>About</li>
+            <li>Services</li>
+            <li>Projects</li>
+            <li class="contact-button"><button>Contact</button></li>
+          </ul>
+        </nav>
+
+        <dialog class="mobile-menu-container">
+          <nav>
+            <ul>
+              <li>About</li>
+              <li>Services</li>
+              <li>Projects</li>
+              <li><button id="contact-button">Contact</li>
+            </ul>
+          </nav>
+        </dialog>
+      </header>
       <h1>We are creatives</h1>
-      <img src="./images/icon-arrow-down.svg" alt="Arrow down" class="arrow-down">
-    </div>
-    <div class="section">
-      <div class="inner-section">
-        <img src="./images/mobile/image-transform.jpg" alt="An egg on a yellow background" class="section-graphics">
-      </div>
-      <div class="color-sect">
+      <img src="./images/icon-arrow-down.svg" alt="icon arrow down" class="icon icon-arrow-down">
+    </section>
+    <section role="transform-section" class="section-container">
+      <picture style="background-color: hsl(48.7, 100%, 50.2%);">
+        <source media="(min-width: 800px)" srcset="./images/desktop/image-transform.jpg">
+        <source media="(max-width: 799px)" srcset="./images/mobile/image-transform.jpg">
+        <img src="./images/mobile/image-transform.jpg" alt="">
+      </picture>
+      <div class="section-information">
         <h2>Transform your brand</h2>
-        <p>We are a full-service creative agency specializing in helping brands grow fast. 
-          Engage your clients through compelling visuals that do most of the marketing for you.
-        </p>
-        <button>Learn more</button>
+        <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through
+          compelling
+          visuals that do most of the marketing for you.</p>
+
+        <button class="btn btn-yellow">Learn more</button>
       </div>
-    </div>
-    <div class="section-flip">
-      <div class="inner-section">
-        <img src="./images/mobile/image-stand-out.jpg" alt="A pink goblet on a pink background" class="section-graphics">
-      </div>
-      <div class="color-sect">
+    </section>
+
+
+    <section role="stand-out-section" class="section-container">
+      <picture style="background-color: #ff806e;">
+        <source media="(min-width: 800px)" srcset="./images/desktop/image-stand-out.jpg">
+        <source media="(max-width: 799px)" srcset="./images/mobile/image-stand-out.jpg">
+        <img src="./images/mobile/image-stand-out.jpg" alt="">
+      </picture>
+      <div class="section-information">
         <h2>Stand out to the right audience</h2>
-        <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-        <button>Learn more</button>
-      </div>
-    </div>
-    <div class="section-flip">
-      <div class="before-test-1 inner-section">
-        <h3>Graphic design</h3>
-        <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
-      </div>
-      <div class="before-test-2 inner-section">
-        <h3>Photography</h3>
-        <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
-      </div>
-    </div>
 
-    <div class="testimonials">
-      <h4>Client testimonials</h4>
-      <div class="testimonials-flex">
-        <div>
-          <img src="./images/image-emily.jpg" alt="Emily's Avatar" class="avatar">
-          <p class="para-top">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-          <span>Emily R.</span>
-          <p class="para-bottom">Marketing Director</p>
-        </div>
-        <div>
-          <img src="./images/image-thomas.jpg" alt="Thomas' Avatar" class="avatar">
-          <p class="para-top">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-          <span>Thomas S.</span>
-          <p class="para-bottom">Chief Operating Officer</p>
-        </div>
-        <div>
-          <img src="./images/image-jennie.jpg" alt="Jennie's Avatar" class="avatar">
-          <p class="para-top">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-          <span>Jennie F.</span>
-          <p class="para-bottom">Business Owner</p>
-        </div>
-      </div>
-    </div>
+        <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll
+          build and
+          extend your brand in digital places.</p>
 
-    <div class="grid-images">
-      <div>
-        <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="Milkbottles">
+        <button class="btn btn-red">Learn more</button>
       </div>
-      <div>
-        <img src="./images/mobile/image-gallery-orange.jpg" alt="Orange">
-      </div>
-      <div>
-        <img src="./images/mobile/image-gallery-cone.jpg" alt="Cone">
-      </div>
-      <div>
-        <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugarcubes">
-      </div>
-    </div>
+    </section>
 
-    <div class="footer">
-      <img src="./images/logo.svg" alt="Sunnyside logo" class="bottom-logo">
-      <ul class="nav-bottom">
-        <li>About</li>
-        <li>Services</li>
-        <li>Projects</li>
-      </ul>
-      <div class="socials">
-        <img src="./images/icon-facebook.svg" alt="icon-facebook">
-        <img src="./images/icon-instagram.svg" alt="icon-instagram">
-        <img src="./images/icon-twitter.svg" alt="icon-twitter">
-        <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+    <section role="stand-graphic-design" class="section-container">
+      <div class="section-graphic-design">
+        <h2>Graphic design</h2>
+        <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures
+          potential clients’ attention.</p>
       </div>
-    </div>
+      <div class="section-photography">
+        <h2>Photography</h2>
+        <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business
+          image.
+        </p>
+      </div>
+    </section>
+
+    <section role="testimonials-section" class="section-testimonials">
+      <h3 class="testimonial-title">Client testimonials</h3>
+      <div class="testimonials-grid">
+        <figure class="testimonial">
+          <img src="./images/image-emily.jpg" alt="Emily profile picture">
+          <blockquote>
+            <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were
+              always
+              hit.</p>
+          </blockquote>
+          <figcaption>
+            <p class="testimonial-name">Emily R.</p>
+            <p class="testimonial-ocupation">Marketing Director</p>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial">
+          <img src="./images/image-thomas.jpg" alt="Thomas profile picture">
+          <blockquote>
+            <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
+              enjoyable
+              experience.</p>
+          </blockquote>
+          <figcaption>
+            <p class="testimonial-name">Thomas S.</p>
+            <p class="testimonial-ocupation">Chief Operating Officer</p>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial">
+          <img src="./images/image-jennie.jpg" alt="Jennie profile picture">
+          <blockquote>
+            <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+            </p>
+          </blockquote>
+          <figcaption>
+            <p class="testimonial-name">Jennie F.</p>
+            <p class="testimonial-ocupation">Business Owner</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section role="gallery-section" class="section-gallery">
+      <div>
+        <picture>
+          <source media="(min-width: 54em)" srcset="./images/desktop/image-gallery-milkbottles.jpg" />
+          <source media="(max-width: 799px)" srcset="./images/mobile/image-gallery-milkbottles.jpg" />
+          <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="" />
+        </picture>
+      </div>
+      <div>
+        <picture>
+          <source media="(min-width: 54em)" srcset="./images/desktop/image-gallery-orange.jpg" />
+          <source media="(max-width: 799px)" srcset="./images/mobile/image-gallery-orange.jpg" />
+          <img src="./images/mobile/image-gallery-orange.jpg" alt="" />
+        </picture>
+      </div>
+      <div>
+        <picture>
+          <source media="(min-width: 54em)" srcset="./images/desktop/image-gallery-cone.jpg" />
+          <source media="(max-width: 799px)" srcset="./images/mobile/image-gallery-cone.jpg" />
+          <img src="./images/mobile/image-gallery-cone.jpg" alt="" />
+        </picture>
+      </div>
+      <div>
+        <picture>
+          <source media="(min-width: 54em)" srcset="./images/desktop/image-gallery-sugarcubes.jpg" />
+          <source media="(max-width: 799px)" srcset="./images/mobile/image-gallery-sugar-cubes.jpg" />
+          <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
+        </picture>
+      </div>
+    </section>
   </main>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://thedeola.netlify.app/">TheDeola</a>.
-  </div> -->
+  <footer>
+    <img src="./images/logo.svg" alt="logo" class="logo-footer">
+
+    <div class="nav-footer">
+      <p>About</p>
+      <p>Services</p>
+      <p>Projects</p>
+    </div>
+
+    <div class="icons-container">
+      <img src="./images/icon-facebook.svg" alt="Facebook icon" class="icon" />
+      <img src="./images/icon-instagram.svg" alt="Instagram icon" class="icon" />
+      <img src="./images/icon-twitter.svg" alt="Twitter icon" class="icon" />
+      <img src="./images/icon-pinterest.svg" alt="Pinterest icon" class="icon" />
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://thedeola.netlify.app/">TheDeola</a>.
+    </div>
+  </footer>
+  <script src="./main.js"></script>
 </body>
 </html>
