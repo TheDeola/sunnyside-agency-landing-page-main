@@ -417,6 +417,12 @@ footer p {
   opacity: 0.6;
 }
 
+.attributtion p a {
+    color: white;
+    font-size: x-small;
+    text-align: center;
+}
+
 .logo-footer {
   width: 12rem;
 }
